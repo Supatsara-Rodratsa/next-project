@@ -2,11 +2,11 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>rose</title>
       </Head>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+      <main>hey </main>
+    </>
   );
 }
