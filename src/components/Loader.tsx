@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import loadingImages from '@/content/loadingImages.json'
-import { LoadingImage } from '@/interfaces/candle.interface'
+import { LoadingImage } from '@/interfaces/product.interface'
 
 const container = {
   show: {

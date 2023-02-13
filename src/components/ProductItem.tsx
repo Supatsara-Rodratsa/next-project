@@ -1,15 +1,8 @@
+import { ProductImageProp } from '@/interfaces/product.interface'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 
-export type ProductImageProps = {
-  id: string
-  image: string
-  productName?: string
-  isProduct: boolean
-  onClick?: () => void
-}
-
-export const ProductImage = (props: ProductImageProps) => {
+export const ProductImage = (props: ProductImageProp) => {
   const router = useRouter()
   const nextPage = (id: string) => {
     if (props.isProduct) return router.push({ pathname: '/products/' + id })
@@ -28,15 +21,16 @@ export const ProductImage = (props: ProductImageProps) => {
       >
         <Image
           className="object-cover"
-          src={props.image}
+          src={props.image[0]}
           alt="image"
           style={{ width: '100%', height: '100%' }}
           width="0"
           height="0"
         />
         <div className="product-overlay"></div>
-        <div className="font-bold text-xl text-white product-name">
-          {props?.productName}
+        <div className="font-bold text-2xl text-white product-name flex flex-col">
+          <p>{props?.name}</p>
+          <p>{props?.isHairTreatment ? 'Hair Treatment' : 'Shower Cream'}</p>
         </div>
       </span>
     </div>

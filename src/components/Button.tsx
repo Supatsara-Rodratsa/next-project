@@ -6,10 +6,10 @@ export type ButtonProps = {
 }
 
 export const Button = (props: ButtonProps) => (
-  <div
+  <button
     onClick={props.onClick}
     className="flex justify-center items-center bg-black rounded-[6px] text-white px-4 py-2 w-fit cursor-pointer text-base hover:text-black hover:bg-green transition-all"
   >
     {props.label}
-  </div>
+  </button>
 )

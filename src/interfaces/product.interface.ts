@@ -1,3 +1,5 @@
+import { Product } from '@/components/Product'
+
 export interface Candle {
   name: string
   price: number
@@ -11,9 +13,13 @@ export interface LoadingImage {
 
 export interface Product {
   id: string
-  image: string
+  image: Array<string>
   name: string
   isHairTreatment?: boolean
   price?: number
   isProduct: boolean
+}
+
+export interface ProductImageProp extends Product {
+  onClick?: () => void
 }

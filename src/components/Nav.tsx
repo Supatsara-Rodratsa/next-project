@@ -11,7 +11,7 @@ export const NavBar = () => {
         HELLA CO.
       </Link>
       <div className="flex gap-3">
-        <p className="flex">Shop</p>
+        <Link href="/products">Shop</Link>
         <p>Cart (0)</p>
       </div>
     </div>

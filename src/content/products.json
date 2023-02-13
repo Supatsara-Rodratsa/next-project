@@ -3,28 +3,37 @@
     "id": "product-1",
     "name": "Grape Fruit",
     "price": 120,
-    "image": "https://images.unsplash.com/photo-1621277907087-edd48920f937?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "image": [
+      "https://images.unsplash.com/photo-1621277907087-edd48920f937?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+    ],
     "isHairTreatment": true,
     "isProduct": true
   },
   {
     "id": "image-1",
     "name": "",
-    "image": "https://images.unsplash.com/photo-1615041274134-ff8d5c86981a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "image": [
+      "https://images.unsplash.com/photo-1615041274134-ff8d5c86981a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+    ],
     "isProduct": false
   },
   {
     "id": "product-2",
     "name": "Kiwi Fruit",
     "price": 100,
-    "image": "https://images.unsplash.com/photo-1621277906941-f577574904ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
-    "isProduct": true
+    "image": [
+      "https://images.unsplash.com/photo-1621277906941-f577574904ea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+    ],
+    "isProduct": true,
+    "isHairTreatment": true
   },
   {
     "id": "product-3",
     "name": "Blueberry",
     "price": 120,
-    "image": "https://images.unsplash.com/photo-1621277906891-be948eec2bcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "image": [
+      "https://images.unsplash.com/photo-1621277906891-be948eec2bcd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+    ],
     "isHairTreatment": true,
     "isProduct": true
   },
@@ -32,7 +41,9 @@
     "id": "product-4",
     "name": "Milk Tea",
     "price": 90,
-    "image": "https://images.unsplash.com/photo-1621277906887-20db802a2c86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "image": [
+      "https://images.unsplash.com/photo-1621277906887-20db802a2c86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+    ],
     "isHairTreatment": true,
     "isProduct": true
   },
@@ -40,7 +51,9 @@
     "id": "product-5",
     "name": "Milk Tea",
     "price": 90,
-    "image": "https://images.unsplash.com/photo-1615041274074-0c0806ed514c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80",
+    "image": [
+      "https://images.unsplash.com/photo-1615041274074-0c0806ed514c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+    ],
     "isHairTreatment": false,
     "isProduct": true
   }

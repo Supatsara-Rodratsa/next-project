@@ -1,5 +1,5 @@
 import React from 'react'
-import { Candle } from '../interfaces/candle.interface'
+import { Candle } from '../interfaces/product.interface'
 import { useProductStore } from '../stores/productStore'
 import Image from 'next/image'
 

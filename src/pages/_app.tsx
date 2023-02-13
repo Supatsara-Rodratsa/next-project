@@ -18,7 +18,7 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   return getLayout(
     <>
       <Head>
-        <title>Scented Candles</title>
+        <title>HELLA CO.</title>
       </Head>
       <Component {...pageProps} />
     </>
