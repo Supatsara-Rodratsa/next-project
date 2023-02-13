@@ -1,7 +1,6 @@
 import { ReactElement } from 'react'
 import Layout from '@/layouts/layout'
 import { GridProduct } from '@/components/GridProducts'
-
 function ProductScreen() {
   return (
     <div className="overflow-scroll flex flex-col justify-center relative items-center">
