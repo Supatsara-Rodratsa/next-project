@@ -3,18 +3,31 @@ import { ReactElement, useEffect, useState } from 'react'
 import Loader from '@/components/Loader'
 import Layout from '@/layouts/layout'
 import { Button } from '@/components/Button'
+import { useRouter } from 'next/router'
 
 function LandingScreen() {
   const [loading, setLoading] = useState(true)
   const [loadingImage, setImage] = useState(false)
-
+  const router = useRouter()
+  const onClick = () => {
+    router.push('/products')
+  }
   useEffect(() => {
     if (!loading) {
-      setTimeout(() => {
+      document.documentElement.setAttribute(
+        'data-show-nav',
+        (!loading).toString()
+      )
+
+      const timeout = setTimeout(() => {
         setImage(true)
       }, 2000)
+
+      return () => {
+        clearTimeout(timeout)
+      }
     }
-  })
+  }, [loading])
 
   return (
     <AnimateSharedLayout>
@@ -53,7 +66,7 @@ function LandingScreen() {
                           </p>
                           <Button
                             label="View Product"
-                            onClick={() => {}}
+                            onClick={() => onClick()}
                           ></Button>
                         </div>
                       </motion.div>
@@ -84,7 +97,6 @@ function LandingScreen() {
                     layoutId="main-image-1"
                   />
                 </div>
-                {/* <div>l,,flsdf</div> */}
               </div>
             )}
           </>

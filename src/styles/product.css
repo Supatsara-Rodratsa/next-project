@@ -1,0 +1,31 @@
+.product-overlay {
+  background-color: #aab7b0;
+}
+
+.product:hover .product-overlay {
+  opacity: 0.7;
+}
+
+.product:hover .product-name {
+  opacity: 1;
+}
+
+.product-name {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-overlay,
+.product-name {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 0.5s ease;
+}

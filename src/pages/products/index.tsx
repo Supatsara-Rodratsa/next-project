@@ -20,6 +20,7 @@ import { Cart } from '@/components/Cart'
 import { NavBar } from '@/components/Nav'
 import { ReactElement } from 'react'
 import Layout from '@/layouts/layout'
+import { GridProduct } from '@/components/GridProducts'
 
 const renderProductItem = (product: Candle) => (
   <div
@@ -34,8 +35,11 @@ function ProductScreen() {
   const total = useProductStore((x) => x.total)
 
   return (
-    <div className="bg-primary overflow-scroll flex flex-col justify-center relative">
-      <h1
+    <div className="overflow-scroll flex flex-col justify-center relative items-center">
+      <div className="mt-[70px]">
+        <GridProduct />
+      </div>
+      {/* <h1
         data-testid="header"
         className="text-[40px] py-14 w-full text-center font-medium"
       >
@@ -46,7 +50,7 @@ function ProductScreen() {
       </div>
       <div className="fixed bottom-10 right-10">
         <Cart totalProducts={total}></Cart>
-      </div>
+      </div> */}
     </div>
   )
 }
