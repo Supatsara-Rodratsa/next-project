@@ -18,6 +18,7 @@ export interface Product {
   isHairTreatment?: boolean
   price?: number
   isProduct: boolean
+  description?: string
 }
 
 export interface ProductImageProp extends Product {

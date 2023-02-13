@@ -28,7 +28,7 @@ export const ProductImage = (props: ProductImageProp) => {
           height="0"
         />
         <div className="product-overlay"></div>
-        <div className="font-bold text-2xl text-white product-name flex flex-col">
+        <div className="font-bold text-2xl text-white product-name flex flex-col uppercase">
           <p>{props?.name}</p>
           <p>{props?.isHairTreatment ? 'Hair Treatment' : 'Shower Cream'}</p>
         </div>
