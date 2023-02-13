@@ -52,7 +52,7 @@ function LandingScreen() {
                             Co.
                           </p>
                           <Button
-                            title="View Product"
+                            label="View Product"
                             onClick={() => {}}
                           ></Button>
                         </div>
