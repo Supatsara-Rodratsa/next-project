@@ -18,6 +18,8 @@ import { Candle } from '@/interfaces/candle.interface'
 import { useProductStore } from '@/stores/productStore'
 import { Cart } from '@/components/Cart'
 import { NavBar } from '@/components/Nav'
+import { ReactElement } from 'react'
+import Layout from '@/layouts/layout'
 
 const renderProductItem = (product: Candle) => (
   <div
@@ -47,6 +49,10 @@ function ProductScreen() {
       </div>
     </div>
   )
+}
+
+ProductScreen.getLayout = function getLayout(page: ReactElement) {
+  return <Layout>{page}</Layout>
 }
 
 export default ProductScreen

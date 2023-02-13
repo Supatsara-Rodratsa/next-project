@@ -3,12 +3,12 @@ import React from 'react'
 
 export const NavBar = () => {
   return (
-    <div className="flex justify-between items-center bg-primary px-6 py-5 border-b fixed z-50 w-screen">
+    <div className="flex justify-between items-center bg-transparent px-[60px] py-5 fixed z-50 w-screen">
       <Link
-        className="font-extrabold text-darkBrown tracking-widest text-2xl"
+        className="font-extrabold text-darkBrown tracking-widest text-2xl font-playFair"
         href="/"
       >
-        Scented Candle
+        HELLA CO.
       </Link>
       <div className="flex gap-3">
         <p className="flex">Shop</p>

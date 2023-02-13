@@ -3,14 +3,24 @@ import '@/styles/globals.css'
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
 import Head from 'next/dist/shared/lib/head'
+import { ReactElement, ReactNode } from 'react'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
-  return (
-    <Layout>
+export type NextPageWithLayout<P = {}, IP = P> = NextPage<P, IP> & {
+  getLayout?: (page: ReactElement) => ReactNode
+}
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout
+}
+
+export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout ?? ((page) => page)
+  return getLayout(
+    <>
       <Head>
         <title>Scented Candles</title>
       </Head>
       <Component {...pageProps} />
-    </Layout>
+    </>
   )
 }
