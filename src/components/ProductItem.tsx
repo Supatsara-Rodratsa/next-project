@@ -1,23 +1,21 @@
-import { ProductImageProp } from '@/interfaces/product.interface'
+import { ProductItemProp } from '@/interfaces/product.interface'
+import clsx from 'clsx'
 import Image from 'next/image'
-import { useRouter } from 'next/router'
 
-export const ProductImage = (props: ProductImageProp) => {
-  const router = useRouter()
-  const nextPage = (id: string) => {
-    if (props.isProduct) return router.push({ pathname: '/products/' + id })
-  }
+export const ProductItem = (props: ProductItemProp) => {
   return (
     <div
-      className={`w-full overflow-hidden ${
-        !props.isProduct ? 'col-span-2 row-span-2' : ''
-      }`}
-      onClick={() => nextPage(props.id)}
+      className={clsx(
+        'w-full overflow-hidden',
+        !props.isProduct && 'col-span-2 row-span-2'
+      )}
+      onClick={props.onClick}
     >
       <span
-        className={`relative ${
-          props.isProduct ? 'product cursor-pointer' : ''
-        }`}
+        className={clsx(
+          'relative',
+          props.isProduct && 'product cursor-pointer'
+        )}
       >
         <Image
           className="object-cover"

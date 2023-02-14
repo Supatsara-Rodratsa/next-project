@@ -1,11 +1,3 @@
-import { Product } from '@/components/Product'
-
-export interface Candle {
-  name: string
-  price: number
-  image: string
-}
-
 export interface LoadingImage {
   id: string
   image: string
@@ -21,6 +13,6 @@ export interface Product {
   description?: string
 }
 
-export interface ProductImageProp extends Product {
+export interface ProductItemProp extends Product {
   onClick?: () => void
 }
