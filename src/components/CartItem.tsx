@@ -30,13 +30,13 @@ export const CartItem = (props: Product) => {
             <Button
               label="-"
               isCircle
-              onClick={() => removeItem(props.id)}
+              onClick={() => removeItem({ ...props })}
             ></Button>
             <p className="text-xl">{allSelectedProducts.get(props.id) || 0}</p>
             <Button
               label="+"
               isCircle
-              onClick={() => addItem(props.id)}
+              onClick={() => addItem({ ...props })}
             ></Button>
           </div>
         </div>
