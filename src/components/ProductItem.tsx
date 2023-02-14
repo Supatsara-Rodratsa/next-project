@@ -1,6 +1,6 @@
 import { ProductItemProp } from '@/interfaces/product.interface'
 import clsx from 'clsx'
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 export const ProductItem = (props: ProductItemProp) => {
   return (
@@ -17,7 +17,7 @@ export const ProductItem = (props: ProductItemProp) => {
           props.isProduct && 'product cursor-pointer'
         )}
       >
-        <Image
+        <motion.img
           className="object-cover"
           src={props.image[0]}
           alt="image"

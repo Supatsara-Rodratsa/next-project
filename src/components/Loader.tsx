@@ -66,13 +66,7 @@ const Loader = ({ setLoading }: any) => {
 export const ImageBlock = ({ variants, src, id }: any) => {
   return (
     <motion.div variants={variants} className={`absolute ${id}`}>
-      <Image
-        src={src}
-        alt={`${id}`}
-        width="0"
-        height="0"
-        style={{ width: '220px', height: 'auto' }}
-      />
+      <motion.img src={src} alt={`${id}`} width="220" height="100" />
     </motion.div>
   )
 }

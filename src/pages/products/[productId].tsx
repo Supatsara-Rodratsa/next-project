@@ -6,6 +6,7 @@ import Layout from '@/layouts/layout'
 import { ReactElement } from 'react'
 import { Button } from '@/components/Button'
 import { useProductStore } from '@/stores/productStore'
+import { motion } from 'framer-motion'
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allProductId = products
@@ -35,7 +36,7 @@ const ProductDetail = (props: Product) => {
   const addItem = useProductStore((x) => x.addItem)
   const removeItem = useProductStore((x) => x.removeItem)
   const renderProductImage = (image: string, index: number) => (
-    <Image
+    <motion.img
       key={index}
       className={`object-cover ${
         index % 2 == 0 ? 'rounded-tl-[70px]' : 'rounded-br-[70px]'

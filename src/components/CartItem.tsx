@@ -2,6 +2,7 @@ import { Product } from '@/interfaces/product.interface'
 import Image from 'next/image'
 import { Button } from './Button'
 import { useProductStore } from '@/stores/productStore'
+import { motion } from 'framer-motion'
 
 export const CartItem = (props: Product) => {
   const allSelectedProducts = useProductStore((x) => x.allSelectedProducts)
@@ -10,7 +11,7 @@ export const CartItem = (props: Product) => {
   return (
     <div className="flex w-full justify-center">
       <div className="flex gap-10 w-[90%]">
-        <Image
+        <motion.img
           className="object-cover rounded-[20px]"
           src={props.image[0]}
           alt="image"
