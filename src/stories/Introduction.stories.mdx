@@ -114,106 +114,134 @@ import StackAlt from './assets/stackalt.svg'
   `}
 </style>
 
-# Welcome to Storybook
+# HELLA CO. - My First Next Project
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+Hella Co. is a sample fictional e-commerce platform for selling hair treatment products. It was created by [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and hosted on Vercel at [HELLA CO.](https://hella-co.vercel.app/)
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+To access Hella Co. Storybook, Please click here
+[Storybook](https://hella-co-storybook.vercel.app/)
 
-<div className="subheading">Configure</div>
+To access Hella Co. GitHub, Please click here
+[GitHub](https://github.com/Supatsara-Rodratsa/next-project)
 
-<div className="link-list">
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/addons/addon-types"
-    target="_blank"
-  >
-    <img src={Plugin} alt="plugin" />
-    <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/webpack"
-    target="_blank"
-  >
-    <img src={StackAlt} alt="Build" />
-    <span>
-      <strong>Build configuration</strong>
-      How to customize webpack and Babel
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/configure/styling-and-css"
-    target="_blank"
-  >
-    <img src={Colors} alt="colors" />
-    <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack"
-    target="_blank"
-  >
-    <img src={Flow} alt="flow" />
-    <span>
-      <strong>Data</strong>
-      Providers and mocking for data libraries
-    </span>
-  </a>
-</div>
+## Getting Started
 
-<div className="subheading">Learn</div>
+To install and run Hella Co. locally, follow these steps:
 
-<div className="link-list">
-  <a className="link-item" href="https://storybook.js.org/docs" target="_blank">
-    <img src={Repo} alt="repo" />
-    <span>
-      <strong>Storybook documentation</strong>
-      Configure, customize, and extend
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://storybook.js.org/tutorials/"
-    target="_blank"
-  >
-    <img src={Direction} alt="direction" />
-    <span>
-      <strong>In-depth guides</strong>
-      Best practices from leading teams
-    </span>
-  </a>
-  <a
-    className="link-item"
-    href="https://github.com/storybookjs/storybook"
-    target="_blank"
-  >
-    <img src={Code} alt="code" />
-    <span>
-      <strong>GitHub project</strong>
-      View the source and add issues
-    </span>
-  </a>
-  <a className="link-item" href="https://discord.gg/storybook" target="_blank">
-    <img src={Comments} alt="comments" />
-    <span>
-      <strong>Discord chat</strong>
-      Chat with maintainers and the community
-    </span>
-  </a>
-</div>
+First, run following command to install the required packages and run the server on local machine.
 
-<div className="tip-wrapper">
-  <span className="tip">Tip</span>Edit the Markdown in{' '}
-  <code>stories/Introduction.stories.mdx</code>
-</div>
+```bash
+npm install
+npm run dev
+```
+
+## Tools
+
+### Prettier Setup
+
+Prettier is a code formatter that automatically formats code to a consistent style across the project.
+
+To install dependency, you can use the following command:
+
+```bash
+npm install --save-dev --save-exact prettier
+```
+
+To add Prettier config file to set rule across the project, you can use the following command:
+
+```bash
+echo {}> .prettierrc.json
+```
+
+To format all files with Prettier, you can use the following command:
+
+```bash
+npx prettier --write .
+```
+
+### ESLint Setup
+
+ESLint is a static code analysis tool that can help catch potential errors, enforce consistent coding style, and promote best practices.
+
+When you create a `Next` project using the `create-next-app` command, ESLint is included by default. During the project setup, you will be prompted to choose whether to install ESLint, and it is recommended that you choose `Yes` to install it.
+
+To make ESLint and Prettier play nice with each other, you can use the following command:
+
+```bash
+npm install --save-dev eslint-config-prettier eslint-plugin-prettier
+```
+
+After installing these packages, you should update your ESLint configuration file (`.eslintrc.json`) to extend the prettier configuration and ensure that `ESLint` and `Prettier` configurations work together smoothly, like so:
+
+```bash
+"extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:prettier/recommended"
+  ],
+```
+
+### GitHook Setup
+
+`Husky` is a tool that allows you to easily create Git hooks, which are scripts that run before or after certain Git actions, such as committing or pushing changes to a repository.
+
+`lint-staged` is a tool that works in conjunction with Husky to run scripts on files that are staged in Git. It allows you to run tasks, such as formatting or linting, on only the files that are about to be committed, instead of running them on the entire project.
+
+In this project, `lint-staged` will be executed automatically every time a new commit is made.
+
+To install dependency and add pre-commit, you can use the following command:
+
+```bash
+npm install --save-dev husky lint-staged
+npx husky install
+npm pkg set scripts.prepare="husky install"
+npx husky add .husky/pre-commit "npx lint-staged"
+```
+
+### JEST Test Setup
+
+[JEST](https://blog.logrocket.com/testing-next-js-apps-jest/) is a popular testing framework for JavaScript that provides a robust and easy-to-use platform for writing and running tests.
+
+To install dependency, you can use the following command:
+
+```bash
+npm install --save-dev jest @testing-library/react @testing-library/jest-dom
+```
+
+After installed dependencies, you will typically want to create a configuration file named `jest.config.js` at the root folder with following configuration.
+
+```bash
+const nextJest = require("next/jest");
+const createJestConfig = nextJest({
+  dir: "./",
+});
+const customJestConfig = {
+  moduleDirectories: ["node_modules", "<rootDir>/"],
+  testEnvironment: "jest-environment-jsdom",
+};
+module.exports = createJestConfig(customJestConfig);
+```
+
+Next, adding Jest command in package json..
+
+```bash
+"test": "jest --watch"
+```
+
+### GitHub Action Setup
+
+`GitHub Actions` is a powerful tool for automating tasks and workflows in your software development process.
+
+In this project, I have two github workflow including `lint.yml` and `coverage.yml`
+
+#### lint.yml
+
+This workflow will be triggered whenever a new push or pull request is made to project.
+
+#### coverage.yml
+
+This workflow will be triggered after your code has passed the linting tests and is ready for more thorough testing.
+
+## Storybook
+
+`Storybook` is a user interface (UI) development environment and component explorer. It enables developers to create and showcase reusable components in isolation without having to navigate the entire application.
