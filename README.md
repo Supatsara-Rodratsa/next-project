@@ -1,6 +1,6 @@
 # HELLA CO. - My First Next Project
 
-Hella Co. is a sample fictional e-commerce platform for selling hair treatment products. It was created by [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and hosted on Vercel at [HELLA CO.](https://hella-co.vercel.app/)
+Hella Co. is a sample functional e-commerce platform for selling hair treatment products. It was created by [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and hosted on Vercel at [HELLA CO.](https://hella-co.vercel.app/)
 
 To access Hella Co. Storybook, Please click here
 [Storybook](https://hella-co-storybook.vercel.app/)

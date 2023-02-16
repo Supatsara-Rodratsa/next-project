@@ -9,6 +9,6 @@ body {
   background-color: #eeedef;
 }
 
-html[data-show-nav='true'] .nav {
+/* html[data-show-nav='true'] .nav {
   opacity: 1;
-}
+} */

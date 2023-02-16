@@ -37,6 +37,9 @@ const ProductDetail = (props: Product) => {
   const removeItem = useProductStore((x) => x.removeItem)
   const renderProductImage = (image: string, index: number) => (
     <motion.img
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
       key={index}
       className={`object-cover ${
         index % 2 == 0 ? 'rounded-tl-[70px]' : 'rounded-br-[70px]'
@@ -49,7 +52,12 @@ const ProductDetail = (props: Product) => {
   )
 
   return (
-    <div className="w-screen px-[60px] absolute top-[50%] right-[50%] pos-center mobile:mt-[100px]">
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="w-screen px-[60px] absolute top-[50%] right-[50%] pos-center mobile:mt-[100px]"
+    >
       <div className="flex justify-center items-start h-full gap-4 tablet:flex-wrap mobile:flex-wrap">
         {props.image.map((item: string, index: number) =>
           renderProductImage(item, index)
@@ -81,7 +89,7 @@ const ProductDetail = (props: Product) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

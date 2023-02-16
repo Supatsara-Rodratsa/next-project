@@ -1,13 +1,16 @@
-import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { ReactElement, useEffect, useState } from 'react'
 import Loader from '@/components/Loader'
 import Layout from '@/layouts/layout'
 import { Button } from '@/components/Button'
 import { useRouter } from 'next/router'
+import { useLoadingStore } from '@/stores/loadingStore'
 
 function LandingScreen() {
-  const [loading, setLoading] = useState(true)
+  const loaded = useLoadingStore((x) => x.isLoaded)
+  const [loading, setLoading] = useState(!loaded)
   const [loadingImage, setImage] = useState(false)
+  const onLoaded = useLoadingStore((x) => x.onLoaded)
   const router = useRouter()
   const onClick = () => {
     router.push('/products')
@@ -29,11 +32,14 @@ function LandingScreen() {
     }
   }, [loading])
 
+  useEffect(() => {
+    if (!loading) onLoaded(!loading)
+  })
+
   return (
     <AnimatePresence>
       {loading ? (
         <div className="absolute">
-          <div className="h-[200px] bg-background w-screen absolute z-[50]"></div>
           <motion.div
             key="loader"
             className="h-screen w-screen z-50 absolute overflow-hidden"
